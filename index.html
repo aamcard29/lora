@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Message From Our Future</title>
+
+<style>
+
+/* =========================
+
+   RESET
+
+========================= */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+
+        radial-gradient(circle at center, #4b182d 0%, #190711 45%, #070207 100%);
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+/* =========================
+
+   MAIN
+
+========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    position: relative;
+
+}
+
+/* =========================
+
+   STARS
+
+========================= */
+
+.star {
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 2px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: .6;
+
+    animation: twinkle 3s infinite alternate;
+
+}
+
+.star:nth-child(1) { top: 12%; left: 15%; }
+
+.star:nth-child(2) { top: 20%; left: 80%; }
+
+.star:nth-child(3) { top: 70%; left: 12%; }
+
+.star:nth-child(4) { top: 82%; left: 83%; }
+
+.star:nth-child(5) { top: 35%; left: 90%; }
+
+.star:nth-child(6) { top: 60%; left: 7%; }
+
+.star:nth-child(7) { top: 15%; left: 52%; }
+
+.star:nth-child(8) { top: 88%; left: 45%; }
+
+@keyframes twinkle {
+
+    from {
+
+        opacity: .2;
+
+    }
+
+    to {
+
+        opacity: .9;
+
+    }
+
+}
+
+/* =========================
+
+   SCREENS
+
+========================= */
+
+.screen {
+
+    width: 100%;
+
+    text-align: center;
+
+    animation: appear .8s ease;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px) scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+/* =========================
+
+   DATE
+
+========================= */
+
+.date {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #cbaab5;
+
+    margin-bottom: 25px;
+
+}
+
+/* =========================
+
+   TEXT
+
+========================= */
+
+h1 {
+
+    font-size: clamp(30px, 8vw, 48px);
+
+    line-height: 1.1;
+
+    margin: 0 0 20px;
+
+}
+
+.subtitle {
+
+    color: #cdbbc2;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+}
+
+/* =========================
+
+   FUTURE PORTAL
+
+========================= */
+
+.portal {
+
+    width: 190px;
+
+    height: 190px;
+
+    margin: 45px auto;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            #9a4265 0%,
+
+            #64243f 28%,
+
+            #351323 55%,
+
+            #16060e 72%
+
+        );
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+
+        0 0 0 10px rgba(255,255,255,.025),
+
+        0 0 0 11px rgba(255,130,170,.18),
+
+        0 0 55px rgba(255,70,130,.3);
+
+    transition: .4s ease;
+
+}
+
+.portal:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+
+        0 0 0 10px rgba(255,255,255,.03),
+
+        0 0 0 12px rgba(255,130,170,.28),
+
+        0 0 80px rgba(255,70,130,.45);
+
+}
+
+.portal:active {
+
+    transform: scale(.93);
+
+}
+
+.portal-heart {
+
+    font-size: 70px;
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+}
+
+/* =========================
+
+   BUTTONS
+
+========================= */
+
+button {
+
+    border: none;
+
+    min-height: 50px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: #351521;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: .3s ease;
+
+}
+
+button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.primary {
+
+    background: #ff729f;
+
+    color: #350d1c;
+
+    box-shadow:
+
+        0 8px 30px rgba(255,114,159,.25);
+
+}
+
+/* =========================
+
+   QUESTION
+
+========================= */
+
+.question {
+
+    font-size: 20px;
+
+    margin: 35px 0 20px;
+
+}
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+/* =========================
+
+   NAME
+
+========================= */
+
+.name {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(38px, 12vw, 70px);
+
+    font-weight: bold;
+
+    letter-spacing: 10px;
+
+    color: #ff91b5;
+
+    margin: 35px 0;
+
+    text-shadow:
+
+        0 0 30px rgba(255,100,150,.5);
+
+    animation: name 1.3s ease;
+
+}
+
+@keyframes name {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.5);
+
+        letter-spacing: 30px;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        letter-spacing: 10px;
+
+    }
+
+}
+
+/* =========================
+
+   FINAL MESSAGE
+
+========================= */
+
+.final-box {
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    background:
+
+        rgba(255,255,255,.055);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.final-heart {
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+}
+
+.final-message {
+
+    font-size: clamp(19px, 5vw, 25px);
+
+    line-height: 1.8;
+
+    color: #fff4f7;
+
+}
+
+.final-message span {
+
+    display: block;
+
+}
+
+.signature {
+
+    margin-top: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #cbaab5;
+
+}
+
+/* =========================
+
+   MOBILE
+
+========================= */
+
+@media (max-width: 400px) {
+
+    .container {
+
+        padding: 18px;
+
+    }
+
+    .portal {
+
+        width: 165px;
+
+        height: 165px;
+
+    }
+
+    .portal-heart {
+
+        font-size: 60px;
+
+    }
+
+    .final-box {
+
+        padding: 28px 18px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- STARS -->
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <div class="star"></div>
+
+    <!-- =========================
+
+         SCREEN 1
+
+    ========================== -->
+
+    <section
+
+        id="screen1"
+
+        class="screen"
+
+    >
+
+        <div class="date">
+
+            YEAR 2036
+
+        </div>
+
+        <h1>
+
+            A message<br>
+
+            from our future.
+
+        </h1>
+
+        <p class="subtitle">
+
+            This message travelled<br>
+
+            ten years just to find you.
+
+        </p>
+
+        <div
+
+            id="portal"
+
+            class="portal"
+
+        >
+
+            <div class="portal-heart">
+
+                ♡
+
+            </div>
+
+        </div>
+
+        <p class="subtitle">
+
+            Touch the heart.
+
+        </p>
+
+    </section>
+
+    <!-- =========================
+
+         SCREEN 2
+
+    ========================== -->
+
+    <section
+
+        id="screen2"
+
+        class="screen hidden"
+
+    >
+
+        <div class="date">
+
+            FUTURE MEMORY 01
+
+        </div>
+
+        <h1>
+
+            Are you ready?
+
+        </h1>
+
+        <p class="subtitle">
+
+            You are about to open<br>
+
+            something you weren't supposed to see yet.
+
+        </p>
+
+        <div class="question">
+
+            Do you really want to know?
+
+        </div>
+
+        <div class="buttons">
+
+            <button
+
+                id="ready"
+
+                class="primary"
+
+            >
+
+                Yes, show me 🤍
+
+            </button>
+
+            <button
+
+                id="scared"
+
+            >
+
+                I'm scared 🫣
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+
+         SCREEN 3
+
+    ========================== -->
+
+    <section
+
+        id="screen3"
+
+        class="screen hidden"
+
+    >
+
+        <div class="date">
+
+            FUTURE MEMORY 02
+
+        </div>
+
+        <h1>
+
+            One thing never changed.
+
+        </h1>
+
+        <p class="subtitle">
+
+            No matter how many years passed,
+
+            <br>
+
+            there was still one name
+
+            <br>
+
+            that felt like home.
+
+        </p>
+
+        <div class="name">
+
+            AHMED
+
+        </div>
+
+        <button
+
+            id="continue"
+
+            class="primary"
+
+        >
+
+            Continue
+
+        </button>
+
+    </section>
+
+    <!-- =========================
+
+         SCREEN 4
+
+    ========================== -->
+
+    <section
+
+        id="screen4"
+
+        class="screen hidden"
+
+    >
+
+        <div class="date">
+
+            MESSAGE RECOVERED
+
+        </div>
+
+        <div class="final-box">
+
+            <div class="final-heart">
+
+                💌
+
+            </div>
+
+            <div class="final-message">
+
+                <span>
+
+                    I loved you then.
+
+                </span>
+
+                <span>
+
+                    I love you now.
+
+                </span>
+
+                <span>
+
+                    And I’ll choose you in every future. 🤍
+
+                </span>
+
+            </div>
+
+            <div class="signature">
+
+                — FROM YOUR FUTURE
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+
+/* =========================
+
+   ELEMENTS
+
+========================= */
+
+const screen1 =
+
+    document.getElementById("screen1");
+
+const screen2 =
+
+    document.getElementById("screen2");
+
+const screen3 =
+
+    document.getElementById("screen3");
+
+const screen4 =
+
+    document.getElementById("screen4");
+
+const portal =
+
+    document.getElementById("portal");
+
+const ready =
+
+    document.getElementById("ready");
+
+const scared =
+
+    document.getElementById("scared");
+
+const continueButton =
+
+    document.getElementById("continue");
+
+/* =========================
+
+   SCREEN FUNCTION
+
+========================= */
+
+function changeScreen(current, next) {
+
+    current.classList.add("hidden");
+
+    next.classList.remove("hidden");
+
+}
+
+/* =========================
+
+   HEART
+
+========================= */
+
+portal.addEventListener("click", function() {
+
+    changeScreen(screen1, screen2);
+
+});
+
+/* =========================
+
+   READY
+
+========================= */
+
+ready.addEventListener("click", function() {
+
+    changeScreen(screen2, screen3);
+
+});
+
+/* =========================
+
+   SCARED
+
+========================= */
+
+scared.addEventListener("click", function() {
+
+    scared.textContent = "Too late 😭";
+
+    setTimeout(function() {
+
+        changeScreen(screen2, screen3);
+
+    }, 700);
+
+});
+
+/* =========================
+
+   CONTINUE
+
+========================= */
+
+continueButton.addEventListener("click", function() {
+
+    changeScreen(screen3, screen4);
+
+});
+
+</script>
+
+</body>
+
+</html>
